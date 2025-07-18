@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="animov.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="animov.js" defer></script>
+    <script src="server.js"></script>
+    <script src="userRoutes.js"></script>
+    <script src="login.js"></script>
+    <script src=""></script>
+    <title>Movie Design</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo"><a href="HELLO.HTML">WatchIt</a></h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item-active"><a href="welcome.html">Home</a></li>
+                    <li class="menu-list-item-active"><a href="welcome.html">Movies</a></li>
+                    <li class="menu-list-item-active"><a href="welcome.html">Anime</a></li>
+                    <li class="menu-list-item-active"><a href="welcome.html">Popular</a></li>
+                    <li class="menu-list-item-active"><a href="welcome.html">Trends</a></li>
+                    <li class="menu-list-item-active"><a href="welcome.html">LOGIN</a></li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search anime, movies, etc..." class="search-input">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </div>
+                <div class="profile-dropdown">
+                    <div class="profile-trigger" onclick="toggleProfileDropdown()">
+                        <img class="profile-pitcher" src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/06/Itachi-Cropped.jpg" alt="Profile Picture">
+                        <div class="profile-text-container">
+                            <span class="profile-text">Profile</span>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="myaccount.html">My Account</a>
+                        <a href="setting.html">Settings</a>
+                        <a href="logout.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="toggle">
+                <i class="fa-solid fa-moon toggle-icon"></i>
+                <i class="fa-solid fa-sun toggle-icon"></i>
+                <div class="toggle-ball"></div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <i class="left-menu-icon fa-solid fa-magnifying-glass" onclick="window.location.href='welcome.html'"></i>
+        <i class="left-menu-icon fa-solid fa-house-chimney" onclick="window.location.href='welcome.html'"></i>
+        <i class="left-menu-icon fa-solid fa-users" onclick="window.location.href='welcome.html'"></i>
+        <i class="left-menu-icon fa-solid fa-bookmark" onclick="window.location.href='welcome.html'"></i>
+        <i class="left-menu-icon fa-solid fa-tv" onclick="window.location.href='welcome.html'"></i>
+        <i class="left-menu-icon fa-solid fa-hourglass-start" onclick="window.location.href='welcome.html'"></i>
+        <i class="left-menu-icon fa-solid fa-cart-shopping" onclick="window.location.href='welcome.html'"></i>
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url(https://images.moviebuff.com/69389d0c-6086-46a3-94cd-ca8dd6605033?w=1000);">
+                <img class="featured-title" src="" alt="KGF 2">
+                <p class="featured-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur ullam voluptate iusto architecto assumenda. Debitis atque a voluptatem magni ducimus ad possimus perferendis eveniet, sit vitae alias provident doloremque neque, ipsum numquam illo eaque. Possimus magnam eligendi voluptates earum animi quo dolor a, esse itaque eius! Iste quis cum porro, quae unde cupiditate dicta?</p>
+                <button class="featured-button" onclick="window.location.href='welcome.html'">WATCH</button>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://lilvakavivlu.wordpress.com/wp-content/uploads/2023/10/365-days-trilogy.jpg?w=1200" alt="365 Days">
+                                <span class="movie-list-item-title">365 DAYS</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://i.ytimg.com/vi/GxaKUU9gnBQ/maxresdefault.jpg" alt="Shang Chi">
+                                <span class="movie-list-item-title">SHANG CHI</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://m.media-amazon.com/images/M/MV5BNWYwOTBiY2EtMmYyOC00YTQ0LTkyZjAtMjQ4NDE0MDk2Y2FiXkEyXkFqcGc@._V1_QL75_UX500_CR0,2,500,281_.jpg" alt="KGF 2">
+                                <span class="movie-list-item-title">KGF PART-2</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://images.filmibeat.com/img/2024/08/salaar-part1ceasefire--1722522809.jpg" alt="Salaar">
+                                <span class="movie-list-item-title">SALAAR</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://cdn.alza.cz/Foto/ImgGalery/Image/avengers-edngame-poster.jpg" alt="Avengers Endgame">
+                                <span class="movie-list-item-title">AVENGERS ENDGAME</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://s2.dmcdn.net/v/VVecL1d5-cytb_ebf/x360" alt="Bahubali 2">
+                                <span class="movie-list-item-title">BAHUBALI PART-2</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://i.ytimg.com/vi/YF1eYbfbH5k/maxresdefault.jpg" alt="Interstellar">
+                                <span class="movie-list-item-title">INTERSTELLAR</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://m.media-amazon.com/images/S/pv-target-images/46687645eb140609071c198e4c5ff040acb5f1acd6d76fb44babb056c6be06ea._UR1920,1080_CLs%7C1920,1080%7C/G/bundle/BottomRightCardGradient16x9.png,/G/01/digital/video/merch/subs/benefit-id/m-r/Prime/logos/channels-logo-white.png%7C0,0,1920,1080+0,0,1920,1080+1578,847,263,156_SX500_FMjpg_.jpg" alt="My Fault">
+                                <span class="movie-list-item-title">MY FAULT</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-angles-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASED ANIME</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2023/02/28/a5ee80f5-4248-4e13-bd93-c8280f709110_8327f5a7.jpg?itok=4b6K50oL&v=1677575502" alt="Meet Me">
+                                <span class="movie-list-item-title">MEET ME</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://images8.alphacoders.com/134/1344546.jpeg" alt="Kung Fu Panda 3">
+                                <span class="movie-list-item-title">KUNG FU PANDA - 3</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://static1.srcdn.com/wordpress/wp-content/uploads/2024/09/solo-leveling-season-2-release-window-art.jpg" alt="Solo Leveling">
+                                <span class="movie-list-item-title">SOLO LEVELING</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://occ-0-8407-116.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYshFqtucKWClnPfMhZ-6rDEWyTa4hVdLHibCL70u5yHX4sA-ofZwz6yJeHiDdAEy4fbp8srszy1iYH2HtZYVWUIS3-ipA_3Lbc.jpg?r=9f2" alt="Bleach">
+                                <span class="movie-list-item-title">BLEACH</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://fandomwire.com/wp-content/uploads/2023/11/jujustu-kaigen.jpg" alt="Jujutsu Kaisen">
+                                <span class="movie-list-item-title">JUJUTSU KAISEN</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/01/10-Best-Anime-To-Watch-If-You-Love-Attack-On-Titan-featured-image.jpg" alt="Attack on Titan">
+                                <span class="movie-list-item-title">ATTACK ON TITAN</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://blog.deagostini.com/wp-content/uploads/2023/02/naruto-cover.jpg" alt="Naruto">
+                                <span class="movie-list-item-title">NARUTO</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                        <div class="movie-list-item">
+                            <a href="welcome.html">
+                                <img class="movie-list-item-image" src="https://animationxpress.com/wp-content/uploads/2022/12/Lookism.jpg" alt="Lookism">
+                                <span class="movie-list-item-title">LOOKISM</span>
+                                <p class="movie-list-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed iure inventore.</p>
+                                <button class="movie-list-item-button">WATCH</button>
+                            </a>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-angles-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+</head>
+<body>
+    <div class="header">
+    <h1> Welcome to Movie Website</h1>
+    <div class="content-container">
+        <p>Your one-stop destination for all your favorite movies and anime.</p>
+    </div>
+</div>
+
+<!-- Footer with Forms -->
+<footer class="footer-beautiful">
+  <div class="footer-inner">
+
+    <!-- Left: About & Social -->
+    <div class="footer-column about">
+      <h2>WatchIt</h2>
+      <p>Watch your favorite anime and movies in one place. Powered by love for story and style.</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- Center: Feedback Form -->
+    <div class="footer-column form">
+      <h3>Feedback</h3>
+      <form id="feedbackForm">
+        <textarea id="message" placeholder="Your feedback" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <!-- Right: Register Form -->
+    <div class="footer-column form">
+      <h3>Register</h3>
+      <form id="registerForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- All Rights Reserved Text -->
+  <div class="footer-bottom">
+    &copy; 2025 WatchIt. All rights reserved.
+  </div>
+</footer>
+
+    <script src="animov.js">
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuItems = document.querySelectorAll('.menu-list-item, .left-menu-icon');
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>. 

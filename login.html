@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>WatchIt - Login & Sign Up</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <div class="logo">WatchIt</div>
+        <nav>
+            <ul>
+                <li><a href="display.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Form -->
+    <section id="loginForm" class="form-container">
+        <h2>Login</h2>
+        <form onsubmit="return false;">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button>Login</button>
+            <p>New user? <a onclick="showSignUp()">Sign up here</a></p>
+        </form>
+    </section>
+
+    <!-- Sign Up Form -->
+    <section id="signupForm" class="form-container hidden">
+        <h2>Sign Up</h2>
+        <form onsubmit="return false;">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button>Sign Up</button>
+            <p>Already have an account? <a onclick="showLogin()">Login here</a></p>
+        </form>
+    </section>
+
+    <script>
+        function showSignUp() {
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('signupForm').classList.remove('hidden');
+        }
+        function showLogin() {
+            document.getElementById('signupForm').classList.add('hidden');
+            document.getElementById('loginForm').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
